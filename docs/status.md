@@ -2,7 +2,7 @@
 
 One-Minute Three Kingdom은 현재 제한 초대 베타입니다.
 
-게임은 터미널-first, SSH-first 비동기 MUD로 플레이할 수 있지만, 아직 작은 커뮤니티 테스트를 통해 핵심 루프를 다듬는 중입니다. 이 public repo는 landing page이자 공개 상태판이며, 전체 source release나 uptime 계약이 아닙니다.
+게임은 터미널-first, SSH-first 비동기 MUD로 플레이할 수 있지만, 아직 작은 커뮤니티 테스트를 통해 핵심 루프를 다듬는 중입니다. 이 public repo는 README와 Markdown 문서, 공개 이미지로 프로젝트를 소개하는 README 중심 소개 레포이자 공개 상태판이며, 전체 source release나 uptime 계약이 아닙니다.
 
 ## 현재 단계
 
