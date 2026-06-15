@@ -67,7 +67,7 @@ ssh <player>@<beta-host>
 
 좋은 피드백은 버그 제보만이 아닙니다. 명령어가 헷갈린 순간, 보고가 읽히지 않은 이유, 사회적 마찰이 생긴 장면, 다른 플레이어의 선택이 신경 쓰였던 순간도 중요합니다.
 
-공개 문서나 이미지의 문제는 [GitHub Issues](../../issues)에 남길 수 있습니다. 실제 베타 접속, 계정, 초대 상태, 보안성 있는 내용은 공개 이슈에 쓰지 말고 초대 안내의 비공개 경로나 [Security Policy](SECURITY.md)를 따릅니다.
+공개 문서나 이미지의 문제는 [GitHub Issues](https://github.com/midagedev/one-minute-three-kingdom-public/issues)에 남길 수 있습니다. 실제 베타 접속, 계정, 초대 상태, 보안성 있는 내용은 공개 이슈에 쓰지 말고 초대 안내의 비공개 경로나 [Security Policy](SECURITY.md)를 따릅니다.
 
 ## 왜 README 중심인가요
 
