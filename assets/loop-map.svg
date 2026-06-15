@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="560" viewBox="0 0 1200 560" role="img" aria-labelledby="title desc">
+  <title id="title">1분 군웅전 one-minute loop map</title>
+  <desc id="desc">A public diagram showing the one-minute play loop: connect, read report, choose, issue orders, log out, world advances, reconnect.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="14" markerHeight="14" refX="9" refY="5" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#8be9d4"/>
+    </marker>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#071016"/>
+      <stop offset="1" stop-color="#132026"/>
+    </linearGradient>
+    <style>
+      .bg { fill: url(#bg); }
+      .title { fill: #f5f7ee; font: 800 46px -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans KR", sans-serif; letter-spacing: 0; }
+      .subtitle { fill: #a9bbb7; font: 600 22px -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans KR", sans-serif; letter-spacing: 0; }
+      .node { fill: #101b24; stroke: #2f4c58; stroke-width: 2; }
+      .nodeHot { fill: #132527; stroke: #4abdaf; stroke-width: 2.5; }
+      .nodeWorld { fill: #221b18; stroke: #d29a4a; stroke-width: 2.5; }
+      .label { fill: #eef7f2; font: 800 26px -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans KR", sans-serif; letter-spacing: 0; }
+      .note { fill: #99aaa6; font: 18px ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; }
+      .command { fill: #8be9d4; font-weight: 800; }
+      .gold { fill: #f4c95d; font-weight: 800; }
+      .path { fill: none; stroke: #8be9d4; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; marker-end: url(#arrow); opacity: 0.86; }
+      .pathGold { fill: none; stroke: #f4c95d; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; marker-end: url(#arrow); opacity: 0.92; }
+      .pill { fill: #0b151b; stroke: #263f49; stroke-width: 1.5; }
+    </style>
+  </defs>
+
+  <rect class="bg" width="1200" height="560"/>
+  <text x="72" y="82" class="title">1분 루프 지도</text>
+  <text x="74" y="118" class="subtitle">짧은 접속, 명확한 선택, 접속 밖에서도 움직이는 세계</text>
+
+  <path class="path" d="M242 186 C304 146 382 146 444 186"/>
+  <path class="path" d="M522 246 C546 300 546 366 522 420"/>
+  <path class="path" d="M444 474 C382 514 304 514 242 474"/>
+  <path class="path" d="M162 420 C138 366 138 300 162 246"/>
+
+  <path class="path" d="M688 224 C762 190 846 190 920 224"/>
+  <path class="pathGold" d="M936 304 C922 374 862 427 786 443"/>
+  <path class="pathGold" d="M708 424 C622 392 580 332 600 260"/>
+
+  <g transform="translate(96 164)">
+    <rect class="nodeHot" width="180" height="88" rx="12"/>
+    <text x="90" y="39" text-anchor="middle" class="label">접속</text>
+    <text x="90" y="66" text-anchor="middle" class="note">login</text>
+  </g>
+  <g transform="translate(412 164)">
+    <rect class="node" width="180" height="88" rx="12"/>
+    <text x="90" y="39" text-anchor="middle" class="label">보고서</text>
+    <text x="90" y="66" text-anchor="middle" class="note command">report</text>
+  </g>
+  <g transform="translate(412 396)">
+    <rect class="node" width="180" height="88" rx="12"/>
+    <text x="90" y="39" text-anchor="middle" class="label">선택</text>
+    <text x="90" y="66" text-anchor="middle" class="note command">choose 1</text>
+  </g>
+  <g transform="translate(96 396)">
+    <rect class="node" width="180" height="88" rx="12"/>
+    <text x="90" y="39" text-anchor="middle" class="label">명령</text>
+    <text x="90" y="66" text-anchor="middle" class="note command">orders</text>
+  </g>
+
+  <g transform="translate(660 180)">
+    <rect class="node" width="190" height="92" rx="12"/>
+    <text x="95" y="40" text-anchor="middle" class="label">로그아웃</text>
+    <text x="95" y="68" text-anchor="middle" class="note">leave cleanly</text>
+  </g>
+  <g transform="translate(920 180)">
+    <rect class="nodeWorld" width="206" height="92" rx="12"/>
+    <text x="103" y="40" text-anchor="middle" class="label">세계 진행</text>
+    <text x="103" y="68" text-anchor="middle" class="note gold">world tick</text>
+  </g>
+  <g transform="translate(650 388)">
+    <rect class="nodeHot" width="206" height="92" rx="12"/>
+    <text x="103" y="40" text-anchor="middle" class="label">재접속</text>
+    <text x="103" y="68" text-anchor="middle" class="note">new report</text>
+  </g>
+
+  <rect x="646" y="304" width="226" height="52" rx="26" class="pill"/>
+  <text x="759" y="337" text-anchor="middle" class="note"><tspan class="gold">1분</tspan><tspan> 단위로 기억을 갱신</tspan></text>
+  <text x="96" y="526" class="note">README-safe diagram: no hostnames, accounts, internal paths, or private URLs.</text>
+</svg>

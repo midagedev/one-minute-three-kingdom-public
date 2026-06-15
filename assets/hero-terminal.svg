@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="560" viewBox="0 0 1200 560" role="img" aria-labelledby="title desc">
+  <title id="title">1분 군웅전 hero terminal</title>
+  <desc id="desc">A dark terminal-style hero image for 1분 군웅전, a four-week recursive TUI Three Kingdoms MUD.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#061015"/>
+      <stop offset="0.52" stop-color="#0b1720"/>
+      <stop offset="1" stop-color="#111a22"/>
+    </linearGradient>
+    <linearGradient id="terminal" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#101b24"/>
+      <stop offset="1" stop-color="#071015"/>
+    </linearGradient>
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feColorMatrix in="blur" type="matrix" values="0 0 0 0 0.28 0 0 0 0 0.79 0 0 0 0 0.68 0 0 0 0.28 0"/>
+      <feBlend in="SourceGraphic" mode="screen"/>
+    </filter>
+    <style>
+      .frame { fill: url(#bg); }
+      .terminal { fill: url(#terminal); stroke: #27404c; stroke-width: 2; }
+      .bar { fill: #14232d; }
+      .muted { fill: #7f929c; }
+      .text { fill: #d8efe8; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; }
+      .sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans KR", sans-serif; }
+      .title { fill: #f5f7ee; font-size: 72px; font-weight: 800; letter-spacing: 0; }
+      .subtitle { fill: #b8c9c4; font-size: 28px; font-weight: 600; letter-spacing: 0; }
+      .command { fill: #8be9d4; font-weight: 700; }
+      .gold { fill: #f4c95d; font-weight: 700; }
+      .danger { fill: #ff6b6b; font-weight: 700; }
+      .prompt { fill: #68d391; }
+      .line { fill: #c8d8d2; font-size: 23px; }
+      .small { font-size: 18px; }
+      .chip { fill: #0d2428; stroke: #2f6466; stroke-width: 1.5; }
+      .panel { fill: #0b151b; stroke: #253b45; stroke-width: 1.5; }
+      .cursor { fill: #8be9d4; }
+    </style>
+  </defs>
+
+  <rect class="frame" width="1200" height="560" rx="0"/>
+  <path d="M0 475 C160 430 270 530 430 493 C610 452 720 395 910 438 C1038 467 1112 432 1200 398 L1200 560 L0 560 Z" fill="#07141b" opacity="0.72"/>
+  <path d="M110 120 C190 80 310 84 385 135" fill="none" stroke="#274f55" stroke-width="2" opacity="0.45"/>
+  <path d="M760 84 C900 35 1030 79 1096 172" fill="none" stroke="#4d3e2c" stroke-width="2" opacity="0.5"/>
+
+  <g filter="url(#softGlow)">
+    <rect x="84" y="76" width="1032" height="408" rx="16" class="terminal"/>
+  </g>
+  <rect x="84" y="76" width="1032" height="54" rx="16" class="bar"/>
+  <path d="M84 114 H1116 V130 H84 Z" fill="#14232d"/>
+  <circle cx="116" cy="103" r="8" fill="#ff6b6b"/>
+  <circle cx="144" cy="103" r="8" fill="#f4c95d"/>
+  <circle cx="172" cy="103" r="8" fill="#68d391"/>
+  <text x="600" y="109" text-anchor="middle" class="text muted small">season-shell / public-showcase</text>
+
+  <text x="132" y="212" class="sans title">1분 군웅전</text>
+  <text x="136" y="260" class="sans subtitle">4주 회귀 TUI 삼국지 MUD</text>
+
+  <g transform="translate(138 314)">
+    <text y="0" class="text line"><tspan class="prompt">$</tspan><tspan> </tspan><tspan class="command">report</tspan><tspan> --today</tspan></text>
+    <text y="42" class="text line"><tspan class="gold">관아 보고서</tspan><tspan>: 민심은 흔들리고, 서문 창고에는 빈 수레가 늘었다.</tspan></text>
+    <text y="84" class="text line"><tspan class="prompt">$</tspan><tspan> </tspan><tspan class="command">orders</tspan><tspan> / </tspan><tspan class="command">choose 1</tspan><tspan> / </tspan><tspan class="command">ledger</tspan></text>
+    <rect x="414" y="69" width="12" height="24" rx="2" class="cursor"/>
+  </g>
+
+  <g transform="translate(764 178)">
+    <rect width="276" height="222" rx="10" class="panel"/>
+    <text x="28" y="42" class="text muted small">CURRENT LOOP</text>
+    <text x="28" y="82" class="text line"><tspan class="gold">01</tspan><tspan> 보고서를 읽는다</tspan></text>
+    <text x="28" y="122" class="text line"><tspan class="gold">02</tspan><tspan> 하나를 고른다</tspan></text>
+    <text x="28" y="162" class="text line"><tspan class="gold">03</tspan><tspan> 세계가 진행된다</tspan></text>
+    <rect x="28" y="184" width="92" height="28" rx="14" class="chip"/>
+    <text x="74" y="204" text-anchor="middle" class="text command small">60 sec</text>
+    <rect x="132" y="184" width="116" height="28" rx="14" class="chip"/>
+    <text x="190" y="204" text-anchor="middle" class="text danger small">reset ready</text>
+  </g>
+
+  <text x="86" y="525" class="text muted small">GitHub README asset - self-contained SVG</text>
+  <text x="1116" y="525" text-anchor="end" class="text muted small">report | orders | choose 1 | ledger</text>
+</svg>

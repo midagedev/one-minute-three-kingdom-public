@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="560" viewBox="0 0 1200 560" role="img" aria-labelledby="title desc">
+  <title id="title">1분 군웅전 four-week season timeline</title>
+  <desc id="desc">A public overview compressing the broad Three Kingdoms flow from 184 to 280 into a four-week recursive season.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#081116"/>
+      <stop offset="1" stop-color="#171a1f"/>
+    </linearGradient>
+    <style>
+      .bg { fill: url(#bg); }
+      .title { fill: #f5f7ee; font: 800 44px -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans KR", sans-serif; letter-spacing: 0; }
+      .subtitle { fill: #a9bbb7; font: 600 21px -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans KR", sans-serif; letter-spacing: 0; }
+      .band1 { fill: #0d2428; }
+      .band2 { fill: #18212c; }
+      .band3 { fill: #231d1a; }
+      .band4 { fill: #171f18; }
+      .bandStroke { stroke: #263f49; stroke-width: 1; }
+      .week { fill: #8be9d4; font: 800 18px ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; }
+      .weekName { fill: #d8efe8; font: 800 24px -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans KR", sans-serif; letter-spacing: 0; }
+      .line { stroke: #d8efe8; stroke-width: 4; stroke-linecap: round; opacity: 0.55; }
+      .dot { fill: #081116; stroke: #f4c95d; stroke-width: 5; }
+      .year { fill: #f4c95d; font: 800 26px ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; }
+      .label { fill: #eef7f2; font: 800 21px -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans KR", sans-serif; letter-spacing: 0; }
+      .note { fill: #9aa9a5; font: 18px -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans KR", sans-serif; letter-spacing: 0; }
+      .small { fill: #8f9f9a; font: 16px ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; }
+      .card { fill: #0b151b; stroke: #253b45; stroke-width: 1.5; }
+    </style>
+  </defs>
+
+  <rect class="bg" width="1200" height="560"/>
+  <text x="72" y="78" class="title">4주 회귀 시즌 타임라인</text>
+  <text x="74" y="114" class="subtitle">184에서 280까지의 큰 흐름을 공개 소개용 시즌 감각으로 압축</text>
+
+  <g transform="translate(72 160)">
+    <rect x="0" y="0" width="264" height="250" rx="14" class="band1 bandStroke"/>
+    <rect x="264" y="0" width="264" height="250" rx="0" class="band2 bandStroke"/>
+    <rect x="528" y="0" width="264" height="250" rx="0" class="band3 bandStroke"/>
+    <rect x="792" y="0" width="264" height="250" rx="14" class="band4 bandStroke"/>
+    <path d="M28 126 H1028" class="line"/>
+
+    <g transform="translate(42 28)">
+      <text class="week">WEEK 1</text>
+      <text y="36" class="weekName">난세가 열린다</text>
+    </g>
+    <g transform="translate(306 28)">
+      <text class="week">WEEK 2</text>
+      <text y="36" class="weekName">판세가 갈린다</text>
+    </g>
+    <g transform="translate(570 28)">
+      <text class="week">WEEK 3</text>
+      <text y="36" class="weekName">국경이 굳는다</text>
+    </g>
+    <g transform="translate(834 28)">
+      <text class="week">WEEK 4</text>
+      <text y="36" class="weekName">끝과 다음 회귀</text>
+    </g>
+
+    <g transform="translate(70 126)">
+      <circle r="15" class="dot"/>
+      <text x="-28" y="55" class="year">184</text>
+      <text x="-42" y="88" class="label">황건의 불길</text>
+    </g>
+    <g transform="translate(290 126)">
+      <circle r="15" class="dot"/>
+      <text x="-28" y="-38" class="year">208</text>
+      <text x="-42" y="-68" class="label">적벽의 분기</text>
+    </g>
+    <g transform="translate(466 126)">
+      <circle r="15" class="dot"/>
+      <text x="-28" y="55" class="year">220</text>
+      <text x="-52" y="88" class="label">삼국의 이름</text>
+    </g>
+    <g transform="translate(638 126)">
+      <circle r="15" class="dot"/>
+      <text x="-28" y="-38" class="year">234</text>
+      <text x="-54" y="-68" class="label">북벌의 그늘</text>
+    </g>
+    <g transform="translate(826 126)">
+      <circle r="15" class="dot"/>
+      <text x="-28" y="55" class="year">263</text>
+      <text x="-50" y="88" class="label">촉의 몰락</text>
+    </g>
+    <g transform="translate(986 126)">
+      <circle r="15" class="dot"/>
+      <text x="-28" y="-38" class="year">280</text>
+      <text x="-50" y="-68" class="label">통일과 리셋</text>
+    </g>
+  </g>
+
+  <g transform="translate(72 452)">
+    <rect width="1056" height="58" rx="12" class="card"/>
+    <text x="28" y="36" class="note">역사 재현보다 플레이 흐름이 우선입니다. 플레이어의 1분 선택이 네 주의 압축된 전장을 다시 엽니다.</text>
+    <text x="1028" y="36" text-anchor="end" class="small">184 -&gt; 208 -&gt; 220 -&gt; 234 -&gt; 263 -&gt; 280</text>
+  </g>
+</svg>
