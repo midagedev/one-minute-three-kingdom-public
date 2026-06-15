@@ -1,43 +1,109 @@
-# Public Visual Language
+# 공개 시각 언어
 
-This public showcase uses a terminal-forward visual style: dark surfaces, quiet borders, and small color accents that behave like TUI tokens.
+이 공개 레포는 별도 랜딩 페이지를 대신합니다. 따라서 README, Markdown 문서,
+SVG 이미지, TUI 예시가 모두 같은 약속을 해야 합니다: 터미널 게임답게 조용하고
+읽기 쉽고, 과장보다 현재 상태를 정확히 보여줍니다.
 
-## Color Tokens
+## 기본 방향
 
-| Token | Use | Example |
+- 첫 화면은 웹 서비스 홍보물이 아니라 SSH-first TUI 게임의 입구처럼 읽혀야 합니다.
+- 이미지는 게임의 실제 감각을 설명하는 보조 자료여야 하며, 장식만을 위한 이미지는
+  늘리지 않습니다.
+- Markdown은 짧은 단락, 명확한 제목, 공개 가능한 링크만 사용합니다.
+- 플레이 문장은 정보 밀도가 높으므로 색은 스캔을 돕는 수준으로만 씁니다.
+- 내부 운영 정보, 실제 접속 정보, 비공개 작업장 흔적은 이미지와 문서 어디에도 넣지
+  않습니다.
+
+## README와 문서
+
+공개 레포의 문서 흐름은 다음 순서를 우선합니다.
+
+1. 무엇을 하는 게임인지 한 문단으로 설명합니다.
+2. 현재 베타 수준과 기대 가능한 범위를 밝힙니다.
+3. 참여 방법은 placeholder와 공개 안내만 남깁니다.
+4. 소스 비공개 이유와 공개 경계를 설명합니다.
+5. 더 자세한 내용은 `docs/status.md`, `docs/public-boundary.md` 같은 짧은 문서로
+   넘깁니다.
+
+Markdown 문서는 랜딩 페이지 카피처럼 화려할 필요가 없습니다. 공개 독자가
+"지금 플레이 가능한가", "무엇을 기대하면 되는가", "무엇을 공개하면 안 되는가"를
+빠르게 알 수 있으면 충분합니다.
+
+## 색상 토큰
+
+TUI와 이미지에서 쓰는 색은 의미가 먼저입니다. 같은 단어는 가능한 같은 계열의 색을
+유지합니다.
+
+| 토큰 | 용도 | 좋은 예 |
 | --- | --- | --- |
-| `[gold]...[/gold]` | rare reward, title object, important state | `[gold]인장[/gold]` |
-| `[danger]...[/danger]` | threat, rumor, failure pressure | `[danger]소문[/danger]` |
-| `[command]...[/command]` | typed commands and command labels | `[command]report[/command]` |
-| `[success]...[/success]` | resolved action or stable recovery | `[success]합의[/success]` |
-| `[muted]...[/muted]` | secondary metadata, timestamps, low-priority labels | `[muted]지난 회귀[/muted]` |
+| `[gold]...[/gold]` | 희귀 보상, 칭호, 중요한 물건, 시즌 핵심 표식 | `[gold]인장[/gold]` |
+| `[danger]...[/danger]` | 위협, 소문, 실패 압박, 즉시 주의가 필요한 상태 | `[danger]소문[/danger]` |
+| `[command]...[/command]` | 입력할 명령어, 명령 라벨, 짧은 CLI 예시 | `[command]report[/command]` |
+| `[success]...[/success]` | 해결, 회복, 합의, 안정화된 결과 | `[success]합의[/success]` |
+| `[muted]...[/muted]` | 시간, 보조 메타데이터, 낮은 우선순위 라벨 | `[muted]지난 회귀[/muted]` |
 
-## Emphasis Rule
+## 중요한 단어만 색칠하기
 
-Color only the meaningful token: a label, command, named object, short status, or one important word.
+색은 문장을 꾸미는 장식이 아니라 독자의 눈을 붙잡는 표지입니다. 한 문장에서 색이
+들어가는 대상은 보통 1개, 많아도 2개까지로 제한합니다.
 
-Do not color a whole sentence just because the sentence is important. If everything is highlighted, the TUI loses scanability and the player cannot tell what changed.
+좋은 기준:
 
-## Examples
+- 명령어 하나
+- 상태 단어 하나
+- 플레이어가 다음 행동을 정하는 데 필요한 사물이나 장소 하나
+- 긴 문장 안에서 의미가 바뀌는 핵심 단어 하나
 
-Good:
+피해야 할 기준:
+
+- 중요한 문장 전체를 색칠하기
+- 같은 문장 안에서 명사마다 색을 붙이기
+- 감정적인 문장을 더 세게 보이게 하려고 색을 덧칠하기
+- 경고색을 일반 강조색처럼 쓰기
+
+## 플레이 문장 예시
+
+좋은 예시는 색이 없어도 읽히고, 색이 있으면 더 빨리 훑을 수 있습니다.
 
 ```text
-관아 보고서: [danger]소문[/danger]이 서문 창고까지 번졌다.
-다음 명령: [command]orders[/command]
-장부에 [gold]인장[/gold] 후보가 남았다.
+관아 보고서: 서문 창고에 [danger]소문[/danger]이 먼저 도착했다.
+장부에는 아직 [gold]인장[/gold] 후보가 하나 남아 있다.
+다음 행동을 고르려면 [command]orders[/command]를 입력한다.
+지난 회귀의 [muted]셋째 밤[/muted], 남문 수비가 비었다.
+두 세력이 시장 앞에서 [success]합의[/success]를 남겼다.
 ```
 
-Avoid:
+한 문장에 두 색을 쓸 때는 서로 다른 기능이어야 합니다.
 
 ```text
-[danger]관아 보고서: 소문이 서문 창고까지 번졌다.[/danger]
-[command]다음 명령을 입력하고 오늘의 선택을 확정한다.[/command]
+[command]petition supplies[/command]로 서문 창고의 [danger]부족[/danger]을 보고한다.
 ```
 
-## SVG Asset Notes
+피해야 할 예시:
 
-- SVG assets must be self-contained for GitHub README rendering.
-- Do not depend on external fonts, external images, scripts, or private URLs.
-- Public images must not include real private beta network hosts, IP addresses, operator accounts, internal paths, or private repository URLs.
-- Use system font stacks and plain SVG text. Keep labels short enough to remain readable at README width.
+```text
+[danger]관아 보고서: 서문 창고에 소문이 먼저 도착했다.[/danger]
+장부에는 [gold]아직[/gold] [gold]인장[/gold] [gold]후보[/gold]가 하나 남아 있다.
+[command]다음 행동을 고르려면 orders를 입력한다.[/command]
+```
+
+ANSI 스타일로 표현해야 할 때도 같은 원칙을 지킵니다. 색 코드는 핵심 단어 주변에만
+둡니다.
+
+```text
+관아 보고서: 서문 창고에 \x1b[31m소문\x1b[0m이 먼저 도착했다.
+다음 행동을 고르려면 \x1b[36morders\x1b[0m를 입력한다.
+```
+
+## SVG와 공개 이미지
+
+SVG는 GitHub README에서 바로 렌더링되어야 합니다.
+
+- 외부 폰트, 외부 이미지, 스크립트, private URL에 의존하지 않습니다.
+- 실제 베타 host, IP, 운영자 계정, 내부 경로, private repository URL을 넣지 않습니다.
+- 텍스트는 README 폭에서도 읽히도록 짧게 유지합니다.
+- 이미지 속 명령어와 상태어도 위 색상 규칙을 따릅니다.
+- 새 이미지는 README 이해를 실제로 돕는 경우에만 추가합니다.
+
+이미지는 독자를 속이면 안 됩니다. 아직 없는 웹 클라이언트, 확정되지 않은 기능,
+운영 약속처럼 보이는 장면은 공개 이미지로 만들지 않습니다.
